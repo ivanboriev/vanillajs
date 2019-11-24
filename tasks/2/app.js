@@ -9,19 +9,22 @@ window.onload = function() {
 
      Удачи!   
   */
-  
-
+  var items = this.document.querySelectorAll(".item");
+  items.forEach(el => {
+    el.style.transition = ".25s opacity, .25s height"
+  });
+  var trigger = this.document.querySelector('div.items')
+  trigger.addEventListener('click',event =>{
+    fade(items[itemRand(0,items.length -1)],1000)
+  },false);
   function fade(element, time){
     // Paste your code here...
-    setInterval(() => {
-      element.style.opacity= SetOpacity(element)
+    element.style.opacity = 0;
+    element.style.opacity = 0;
+    setTimeout(() => {
+    element.style.display = "none"
     }, time);
   }
-
-  function SetOpacity(element){
-    return element.style.opacity - 0.5;
-  }
-  var items = this.document.querySelectorAll(".item");
 
   function activeItem() {
     this.classList.toggle("active");
@@ -29,7 +32,6 @@ window.onload = function() {
 
   this.setInterval(function() {
     var rnd = itemRand(0, items.length - 1);
-    fade(items[rnd],500);
     activeItem.call(items[rnd]);
   }, 500);
 
