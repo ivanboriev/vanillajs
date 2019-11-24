@@ -10,5 +10,19 @@ window.onload = function() {
      Удачи!   
   */
   // Paste your code here:
-  aler("Hello blyat")
+ /* while(true){
+    this.console.log(Math.floor(Math.random() * (9 - 1 + 1) + 1));
+  }*/
+  var initTimer = window.setInterval(DiscoDiscoPartizani,500)
+  function DiscoDiscoPartizani(){
+    var randomNumber = Math.floor(Math.random() * 9);
+    var allItems = this.document.querySelectorAll('div.item');
+    if(allItems[randomNumber].classList.contains('active'))
+    {
+      this.document.querySelectorAll('div.item')[randomNumber].classList.remove('active');
+    }else{
+      this.document.querySelectorAll('div.item')[randomNumber].classList.add('active');
+    }
+    console.log(randomNumber)
+  }
 };
