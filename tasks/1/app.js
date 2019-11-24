@@ -10,4 +10,5 @@ window.onload = function() {
      Удачи!   
   */
   // Paste your code here:
+  aler("Hello blyat")
 };
