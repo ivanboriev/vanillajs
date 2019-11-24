@@ -20,6 +20,5 @@ window.onload = function() {
     }else{
       this.document.querySelectorAll('div.item')[randomNumber].classList.add('active');
     }
-    console.log(randomNumber)
   }
 };
