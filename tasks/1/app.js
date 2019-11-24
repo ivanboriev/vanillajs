@@ -9,5 +9,5 @@ window.onload = function() {
      Сие действие должно происходить каждую секунду.
      Удачи!   
   */
-  // Paste your code here:
+  // Paste your code here:  
 };
