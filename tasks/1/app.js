@@ -10,9 +10,6 @@ window.onload = function() {
      Удачи!   
   */
   // Paste your code here:
- /* while(true){
-    this.console.log(Math.floor(Math.random() * (9 - 1 + 1) + 1));
-  }*/
   var initTimer = window.setInterval(DiscoDiscoPartizani,500)
   function DiscoDiscoPartizani(){
     var randomNumber = Math.floor(Math.random() * 9);
