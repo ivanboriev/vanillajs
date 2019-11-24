@@ -9,12 +9,12 @@
   grid-gap: 0.5vw;
   height: 100vh;
 }
-.items > .item {
+.item {
   font-size: 5vw;
   padding: 0.5em;
   background: gold;
   text-align: center;
 }
-.items > .item + .active {
+.active {
   background: cyan;
 }
