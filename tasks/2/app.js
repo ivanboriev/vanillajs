@@ -13,9 +13,14 @@ window.onload = function() {
 
   function fade(element, time){
     // Paste your code here...
+    setInterval(() => {
+      element.style.opacity= SetOpacity(element)
+    }, time);
   }
 
-
+  function SetOpacity(element){
+    return element.style.opacity - 0.5;
+  }
   var items = this.document.querySelectorAll(".item");
 
   function activeItem() {
@@ -24,6 +29,7 @@ window.onload = function() {
 
   this.setInterval(function() {
     var rnd = itemRand(0, items.length - 1);
+    fade(items[rnd],500);
     activeItem.call(items[rnd]);
   }, 500);
 
