@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+}
+
+.items {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5vw;
+  height: 100vh;
+}
+.items > .item {
+  font-size: 5vw;
+  padding: 0.5em;
+  background: gold;
+  text-align: center;
+}
+.items > .item + .active {
+  background: cyan;
+}
