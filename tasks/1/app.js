@@ -9,16 +9,14 @@ window.onload = function() {
      Сие действие должно происходить каждую секунду.
      Удачи!   
   */
+
   // Paste your code here:
+  var allItems = this.document.querySelectorAll('div.item');
   var initTimer = window.setInterval(DiscoDiscoPartizani,500)
   function DiscoDiscoPartizani(){
-    var randomNumber = Math.floor(Math.random() * 9);
-    var allItems = this.document.querySelectorAll('div.item');
-    if(allItems[randomNumber].classList.contains('active'))
-    {
-      this.document.querySelectorAll('div.item')[randomNumber].classList.remove('active');
-    }else{
-      this.document.querySelectorAll('div.item')[randomNumber].classList.add('active');
-    }
+    var randomNumber = Math.floor(Math.random() * allItems.length);
+    allItems[randomNumber].classList.toggle('active')
   }
+ 
+
 };
