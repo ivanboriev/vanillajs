@@ -16,6 +16,7 @@ window.onload = function() {
   function DiscoDiscoPartizani(){
     var randomNumber = Math.floor(Math.random() * allItems.length);
     allItems[randomNumber].classList.toggle('active')
+    console.log(randomNumber)
   }
  
 
