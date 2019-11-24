@@ -25,7 +25,7 @@ window.onload = function() {
         element.style.opacity = this.opacity;
         this.steps--;        
 
-        if(this.steps === 0){
+        if(this.steps <= 0){
           clearInterval(this.timer);
         }
       }, (1000/ this.fps));
