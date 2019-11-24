@@ -10,12 +10,13 @@ window.onload = function() {
      Удачи!   
   */
   var items = this.document.querySelectorAll(".item");
+  var myTimer = 3330;
   items.forEach(el => {
-    el.style.transition = ".25s opacity, .25s height"
+    el.style.transition = "${myTimer}ms opacity, ${myTimer}ms height"
   });
   var trigger = this.document.querySelector('div.items')
   trigger.addEventListener('click',event =>{
-    fade(items[itemRand(0,items.length -1)],1000)
+    fade(items[itemRand(0,items.length -1)],myTimer)
   },false);
   function fade(element, time){
     // Paste your code here...
