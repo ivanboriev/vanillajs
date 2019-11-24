@@ -9,5 +9,20 @@ window.onload = function() {
      Сие действие должно происходить каждую секунду.
      Удачи!   
   */
-  // Paste your code here:  
+  // Paste your code here:
+
+  var items = this.document.querySelectorAll(".item");
+
+  function activeItem() {
+    this.classList.toggle("active");
+  }
+
+  this.setInterval(function() {
+    var rnd = itemRand(0, items.length - 1);
+    activeItem.call(items[rnd]);
+  }, 500);
+
+  function itemRand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1));
+  }
 };
