@@ -11,13 +11,14 @@ window.onload = function() {
   */
   
 
-  function fade(element, time){
+  function fade(element, time, callback){
     this.fps = 60; // Кадры в секунду
     this.element = element; // Елемент ДОМ
     this.time = time || 500; // Время Анимации
     this.steps = Math.floor(this.time / this.fps); // Количество кадров
     this.opacity = 1; // Прозрачность
     this.d0 = this.opacity / this.steps; // На сколько уменьшаем opacity за кадр
+    this.cb = callback;
 
 
     this.timer = setInterval(function(){
@@ -27,6 +28,7 @@ window.onload = function() {
 
         if(this.steps <= 0){
           clearInterval(this.timer);
+          this.cb.call(element);
         }
       }, (1000/ this.fps));
     
@@ -38,7 +40,9 @@ window.onload = function() {
 
   for(var i = 0; i < items.length; i++){
     items[i].onclick = function(){
-       fade(this, 1000);
+       fade(this, 3000, function(){
+        this.style.display = 'none';
+       });
     }
   }
 
